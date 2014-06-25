@@ -11,7 +11,7 @@ class Playlist():
 		""" Opens an M3U file and returns a list of paths to songs in playlist.
 		"""
 		with open(path, 'r') as f:
-			return [line.strip() for line in f]
+			return [line.decode('utf-8').strip() for line in f]
 
 	def get_playlist(self):
 		""" Returns the playlist (i.e. a list of song paths). """
